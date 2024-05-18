@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family: 'Inter', sans-serif;
+  --font-family-accent: 'PressStart2P', sans-serif;
+  --font-weight-title: 700;
+  --font-weight-text: 400;
+  --background-image: url(../images/background-l.jpg);
+  --background-color: rgba(255, 255, 255, 1);
+  --accent-color: rgba(0, 0, 0, 1);
+  --heart-contour-color: var(--accent-color);
+  --heart-main-color: #ff0000;
+  --text-shadow: rgba(255, 255, 255, 1);
+  --gradient-from: #e7e7e7;
+  --gradient-before: #1a1a1a;
+  --gradient-strip: #d3d3d3;
+  --gradient-strip-transparent: rgba(26 26 26/ 0);
+  --button-text-color: #ffffff;
+}
