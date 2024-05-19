@@ -325,11 +325,10 @@
   background-color: var(--background-color);
   width: calc(100% - 40px);
   max-width: 350px;
-  border: none;
+  border: 2px solid var(--accent-color);
   inset: 0;
   position: fixed;
   padding: 30px;
-  border: 2px solid var(--accent-color);
 }
 
 .dialog::backdrop {
