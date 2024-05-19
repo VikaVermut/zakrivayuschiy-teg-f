@@ -23,7 +23,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-family);
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" var(--font-weight-text);
   background-size: cover;
   background-attachment: fixed;
   background-image: repeating-linear-gradient(
@@ -221,6 +221,7 @@
   background-color: var(--background-color);
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -235,56 +236,14 @@
   display: block;
 }
 
-.card__icon-button:hover .like-icon:not(.is-liked) .core {
-  fill: var(--heart-contour-color);
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:hover .like-icon:not(.is-liked) .main-body {
-  fill: var(--heart-contour-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.card__icon-button:active .like-icon .core {
-  fill: var(--heart-main-color);
-  transition: fill 0.3s linear;
-}
-
-.card__icon-button:active .like-icon .main-body {
-  fill: var(--heart-main-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart-main-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-main-color);
-  transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-main-color);
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon.is-liked {
-  animation: scale 0.3s ease-in 0.1s alternate;
-}
-
-.like-icon.is-liked .sparks {
-  animation: opacity 0.3s ease-in 0.3s alternate;
-}
-
 .card__text {
   font-family: var(--font-family);
   font-size: 18px;
   font-weight: var(--font-weight-text);
 }
 
-.card__text_personal {
-  margin-top: 25px;
+.card__text:not(:last-of-type) {
+  margin-bottom: 25px;
 }
 
 .card__save-button {
@@ -308,6 +267,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 }
 
 .button:focus {
@@ -364,22 +324,30 @@
 .dialog {
   background-color: var(--background-color);
   width: calc(100% - 40px);
-  max-width: 400px;
+  max-width: 350px;
   border: none;
   inset: 0;
   position: fixed;
   padding: 30px;
+  border: 2px solid var(--accent-color);
 }
 
 .dialog::backdrop {
   content: '';
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .dialog-block {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+}
+
+.dialog__floppy {
+  width: 40px;
+  height: 40px;
+  fill: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .dialog__text {
@@ -393,44 +361,6 @@
   width: 100%;
   height: 38px;
   margin-top: 30px;
-}
-
-@keyframes bounce {
-  0% {
-    left: -18px;
-  }
-
-  100% {
-    left: -14px;
-  }
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
 @media (max-width: 376px) {

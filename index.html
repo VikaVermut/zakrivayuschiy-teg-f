@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
-    <link rel="icon" href="./svg/favicon.svg" />
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <div class="container">
       <header class="header">
-        <h1 class="header__title">&lt;/HTML&gt;</h1>
-        <h2 class="header__subtitle">закрывающий тег</h2>
+        <a class="header__title">&lt;/HTML&gt;</a>
+        <h1 class="header__subtitle">закрывающий тег</h1>
         <nav class="theme-menu header__theme-menu">
           <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
           <ul class="theme-menu__list">
@@ -68,11 +70,11 @@
               основами и настроиться на учёбу. И, возможно, подумать, как новые
               знания могут повлиять на ваше будущее.
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний о начале обучения.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -105,7 +107,7 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button">
+              <button type="button" class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -129,11 +131,11 @@
               за этим ощущением скрываются более глубокие вопросы: с чего
               начать? а вдруг будет слишком сложно? что, если я не справлюсь?
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний о начале первого спринта.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -188,11 +190,11 @@
               могла быстро померкнуть и смениться ожиданием провала. Или вы,
               наоборот, могли вдохновиться успехами и поверить в себя.
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний об окончании первого спринта.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -249,11 +251,11 @@
               подвержены перфекционизму и вместо того, чтобы сделать идеально,
               старались просто сделать.
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний о начале второго спринта.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -311,11 +313,11 @@
               поддавался. Осваивать что-то новое легче, когда рядом есть
               единомышленники, не правда ли?
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний об окончании второго спринта.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -370,11 +372,11 @@
               вам могло показаться, что решения просто иссякли. Значит, пришло
               время посмотреть на задачу под другим углом.
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний о начале третьего спринта.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -431,11 +433,11 @@
               пожить. В такие моменты очень нужна концентрация. Вспомните,
               откуда вы её черпали.
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место для ваших воспоминаний об окончании третьего спринта.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -493,12 +495,12 @@
               полностью не получится, но это тот случай, когда важен сам процесс
               познания. Ведь часто путь — и есть результат.
             </p>
-            <p class="card__text card__text_personal">
+            <p class="card__text">
               Место, чтобы остановиться, подумать и написать, что вы чувствуете
               в этой точке пути.
             </p>
             <div class="card-buttons">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   width="39"
@@ -539,23 +541,24 @@
         </article>
 
         <button
+          type="button"
           class="button card__save-button"
           onclick="window['save'].showModal()"
         >
           <svg class="floppy">
             <use xlink:href="svg/floppy.svg#floppy"></use>
           </svg>
-          <span class="button__text">Сохранить на память</span>
+          <span class="button__text">Сохранить на&nbsp;память</span>
         </button>
 
-        <dialog id="save" class="dialog">
+        <dialog id="save" class="dialog" open="open">
           <form method="dialog">
             <div class="dialog-block">
-              <svg style="width: 40px; height: 40px; fill: var(--accent-color)">
+              <svg class="dialog__floppy">
                 <use xlink:href="svg/floppy.svg#floppy"></use>
               </svg>
               <span class="dialog__text"
-                >Вставьте <br />дискету, чтобы продолжить</span
+                >Вставьте дискету, чтобы продолжить</span
               >
             </div>
             <button class="button dialog__button">
